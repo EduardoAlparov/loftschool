@@ -1,0 +1,320 @@
+.maincontent {
+  height: 100%;
+}
+
+.section {
+  height: 100%;
+  min-height: 640px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url(/img/background.png) no-repeat;
+  background-size: cover;
+  height: -webkit-fill-available;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.header__menu {
+  margin-left: auto;
+}
+
+.menu {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.menu__item::after {
+  content: '';
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 1rem;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.menu__item:last-child:after {
+  content: none;
+}
+
+.menu__link {
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Ubuntunormal';
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 2.308;
+}  
+
+
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  font-family: 'Ubuntunormal';
+}
+
+
+.button_bg_red {
+  background: #e45028;
+}
+
+.button_bg_black {
+  background-color: black;
+
+}
+
+
+.content {
+  display: flex;
+  max-width: 1100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__image {
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.content__image-pic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.content__title {
+  margin-left: 25px;
+}
+
+.section__title {
+  font-family: Gagalin;
+  color: #f9b43b;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 5.3rem;
+  margin-bottom: 40px;
+}
+
+.section__title-second {
+  font-family: 'Lifehack-Medium';
+  font-size: 65px;
+  color: white;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.down {
+  width: 1.8125rem;
+  height: 0.875rem;
+  font-style: 'Ubuntu';
+
+}
+
+.main__down {
+  margin-bottom: 15px;
+}
+
+.best {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(/img/webackground.png) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 650px;
+}
+
+.section__title--black {
+  color: #2f3234;
+}
+
+.best__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages {
+  text-align: center;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  width: 940px;
+}
+
+
+.advantages__item {
+  flex: 1;
+  margin-right: 38px;
+}
+
+.advantages__item:last-child {
+  margin-right: 0;
+}
+
+.advantages__avatar {
+  width: auto;
+  height: 95px;
+  margin-bottom: 35px;
+}
+
+.advantages__title {
+  font-family: Lifehack-Medium;
+  font-size: 24px;
+  color: rgb(47, 50, 52);
+  line-height: 1.167;
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+.advantages__discr{
+  font-size: 14px;
+  font-family: 'Ubuntunormal';
+  color: rgba(47, 50, 52, 0.8);
+  line-height: 1.714;
+  text-align: center;
+}
+
+ 
+.feed {
+  height: 100vh;
+  min-height: 650px;
+}
+
+.feed__list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  filter: grayscale(100%);
+}
+
+.feed__item {
+  position: relative;
+  width: 25%;
+  height: 50%;
+  cursor: pointer;
+}
+
+.feed__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.feed__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  opacity: 0;
+  transform: scale(.8);
+  transition: .3s;
+  padding: 50px 20px;
+}
+
+.feed__item:hover .feed__info {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feed__title{
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: rgb(255, 255, 255);
+  line-height: 2.008;
+  text-align: left;
+}
+
+.feed__text {
+  font-size: 14px;
+  font-family: "Ubuntunormal";
+  color: rgb(255, 255, 255);
+  line-height: 1.714;
+}
+
+.button_bg_black {
+  padding: 0.625rem 0.9375rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  background: black;
+}
+
+.feed__back-one {
+  background: url(/img/feeds_foto/girl_one.png) no-repeat;
+  background-size: cover;
+}
+
+
+.feed__back-two {
+  background: url(/img/feeds_foto/man_one.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-three {
+  background: url(/img/feeds_foto/girl_two.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-four {
+  background: url(/img/feeds_foto/man_two.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-five {
+  background: url(/img/feeds_foto/man_three.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-six {
+  background: url(/img/feeds_foto/girl_three.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-seven {
+  background: url(/img/feeds_foto/oldman.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-eight {
+  background: url(/img/feeds_foto/beardman.png) no-repeat;
+  background-size: cover;
+}
+
