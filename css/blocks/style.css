@@ -33,6 +33,12 @@
   color: #fff;
 }
 
+.menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu__item {
   display: flex;
   align-items: center;
@@ -60,7 +66,7 @@
 
 .menu__link {
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Ubuntunormal';
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -134,7 +140,6 @@
   width: 1.8125rem;
   height: 0.875rem;
   font-style: 'Ubuntu';
-
 }
 
 .main__down {
@@ -147,7 +152,7 @@
   justify-content: center;
   background: url(/img/webackground.png) no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 102vh;
   min-height: 650px;
 }
 
@@ -209,6 +214,7 @@
 .feed {
   height: 100vh;
   min-height: 650px;
+  background: black;
 }
 
 .feed__list {

@@ -1,0 +1,17 @@
+
+.best {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(/img/webackground.png) no-repeat;
+  background-size: cover;
+  height: 102vh;
+  min-height: 650px;
+}
+
+.best__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

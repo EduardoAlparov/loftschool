@@ -1,0 +1,84 @@
+
+.feed__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.feed__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  opacity: 0;
+  transform: scale(.8);
+  transition: .3s;
+  padding: 50px 20px;
+}
+
+.feed__item:hover .feed__info {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feed__title{
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: rgb(255, 255, 255);
+  line-height: 2.008;
+  text-align: left;
+}
+
+.feed__text {
+  font-size: 14px;
+  font-family: "Ubuntunormal";
+  color: rgb(255, 255, 255);
+  line-height: 1.714;
+}
+
+
+.feed__back-one {
+  background: url(/img/feeds_foto/girl_one.png) no-repeat;
+  background-size: cover;
+}
+
+
+.feed__back-two {
+  background: url(/img/feeds_foto/man_one.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-three {
+  background: url(/img/feeds_foto/girl_two.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-four {
+  background: url(/img/feeds_foto/man_two.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-five {
+  background: url(/img/feeds_foto/man_three.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-six {
+  background: url(/img/feeds_foto/girl_three.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-seven {
+  background: url(/img/feeds_foto/oldman.png) no-repeat;
+  background-size: cover;
+}
+
+.feed__back-eight {
+  background: url(/img/feeds_foto/beardman.png) no-repeat;
+  background-size: cover;
+}
+

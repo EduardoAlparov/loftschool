@@ -1,0 +1,33 @@
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  font-family: 'Ubuntunormal';
+}
+
+
+.button_bg_red {
+  background: #e45028;
+}
+
+.button_bg_black {
+  background-color: black;
+
+}
+
+.button_bg_black {
+  padding: 0.625rem 0.9375rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  background: black;
+}

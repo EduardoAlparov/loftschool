@@ -1,0 +1,20 @@
+ 
+.feed {
+  height: 100vh;
+  min-height: 650px;
+  background: black;
+}
+
+.feed__list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  filter: grayscale(100%);
+}
+
+.feed__item {
+  position: relative;
+  width: 25%;
+  height: 50%;
+  cursor: pointer;
+}

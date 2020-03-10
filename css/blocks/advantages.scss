@@ -1,0 +1,19 @@
+
+.advantages {
+  text-align: center;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  width: 940px;
+}
+
+.advantages__item {
+  flex: 1;
+  margin-right: 38px;
+}
+
+.advantages__item:last-child {
+  margin-right: 0;
+}

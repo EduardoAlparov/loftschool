@@ -1,0 +1,46 @@
+$itemsMargin: 13px;
+
+.menu {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: #fff;
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: $itemsMargin;
+  }
+
+  &:last-child {
+  margin-right: 0;
+  }
+
+  &:last-child:after {
+    content: none;
+  }
+}
+
+.menu__link {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Ubuntunormal';
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 2.308;
+  margin-left: $itemsMargin;
+}  
