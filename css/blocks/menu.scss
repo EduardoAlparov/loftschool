@@ -27,11 +27,10 @@ $itemsMargin: 13px;
   }
 
   &:last-child {
-  margin-right: 0;
-  }
-
-  &:last-child:after {
-    content: none;
+    margin-right: 0;
+    &:after {
+     content: none;
+    }
   }
 }
 
@@ -41,6 +40,7 @@ $itemsMargin: 13px;
   font-family: 'Ubuntunormal';
   color: rgb(255, 255, 255);
   text-transform: uppercase;
+  text-decoration: none;
   line-height: 2.308;
   margin-left: $itemsMargin;
 }  
