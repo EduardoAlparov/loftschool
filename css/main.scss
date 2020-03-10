@@ -8,9 +8,9 @@ $red: #e35028;
 @import "../css/_misc/normalize.scss";
 
 // setups
-@import "../css/_misc/mixins";
-@import "../css/_misc/fonts";
-@import "../css/_misc/layout";
+@import "../css/_misc/mixins.scss";
+@import "../css/_misc/fonts.scss";
+@import "../css/_misc/layout.scss";
 
 // components
 @import "../css/blocks/section.scss";
