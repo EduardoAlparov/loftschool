@@ -5,22 +5,23 @@ $black: #2f3234;
 $red: #e35028;
 
 //normalize
-@import "_misc/normalize.scss";
+@import "../css/_misc/normalize.scss";
 
 // setups
-@import "_misc/fonts.scss";
-@import "_misc/mixins.scss";
-@import "_misc/layout.scss";
+@import "../css/_misc/mixins";
+@import "../css/_misc/fonts";
+@import "../css/_misc/layout";
 
 // components
 @import "../css/blocks/section.scss";
 @import "../css/blocks/header.scss";
 @import "../css/blocks/menu.scss";
-@import "../css/blocks/main.scss";
 @import "../css/blocks/content.scss";
 @import "../css/blocks/btn.scss";
 @import "../css/blocks/scroll-down.scss";
 @import "../css/blocks/advantages.scss";
+@import "../css/blocks/advantage.scss";
 @import "../css/blocks/feeds.scss";
 @import "../css/blocks/feed.scss";
-@import "../css/blocks/best.scss";
+@import "../css/blocks/main-section.scss";
+@import "../css/blocks/main.scss";
