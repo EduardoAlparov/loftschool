@@ -1,8 +1,11 @@
  
 .feed {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   background: black;
+  @include tablets {
+    min-height: rem(0px);
+  }
 }
 
 .feed__list {
@@ -17,4 +20,9 @@
   width: 25%;
   height: 50%;
   cursor: pointer;
+
+  @include tablets {
+    height: 25%;
+    width: 50%;
+  }
 }

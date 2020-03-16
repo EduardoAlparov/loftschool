@@ -23,6 +23,14 @@
 .feed__item:hover .feed__info {
   opacity: 1;
   transform: scale(1);
+
+  @include tablets {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .feed__title{
@@ -31,6 +39,11 @@
   color: rgb(255, 255, 255);
   line-height: 2.008;
   text-align: left;
+  
+  @include phones {
+    font-size: rem(20px);
+    text-align: center;
+  }
 }
 
 .feed__text {
@@ -38,6 +51,10 @@
   font-family: "Ubuntunormal";
   color: rgb(255, 255, 255);
   line-height: 1.714;
+
+  @include phones {
+    display: none;
+  }
 }
 
 
@@ -82,3 +99,18 @@
   background-size: cover;
 }
 
+.feed__button {
+  border-radius: rem(5px);
+  background-color: rgb(47, 50, 52);
+  padding: rem(8px) rem(12px);
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include ubuntu(medium);
+  font-size: rem(12px);
+  transition: .3s;
+  &:hover {
+    background-color: rgb(31, 33, 34);
+  }
+}

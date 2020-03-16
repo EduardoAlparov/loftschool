@@ -1,19 +1,34 @@
 
 .advantages__avatar {
   width: auto;
-  height: 95px;
-  margin-bottom: 35px;
+  height: rem(95px);
+  margin-bottom: rem(35px);
   display: flex;
   justify-content: center;
+  @include phones {
+    margin-right: rem(20px);
+    width: 30%;
+  }
+}
+
+
+.advantages__pc {
+  width: 90%;
+  height: rem(100px);
+  svg {
+    max-width: 95%;
+  }
+  @include phones {
+    position: static;
+    transform: none;
+  }
 }
 
 .advantages__title {
-  font-family: 'Lifehack-Medium';
-  font-size: 24px;
-  color: rgb(47, 50, 52);
-  line-height: 1.167;
-  text-align: center;
-  margin-bottom: 23px;
+  font-size: rem(24px);
+  @include lifehack;
+  color: $black;
+  margin-bottom: rem(20px);
 }
 
 .advantages__discr{

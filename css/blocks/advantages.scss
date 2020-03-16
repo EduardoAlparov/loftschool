@@ -5,15 +5,42 @@
 
 .advantages__list {
   display: flex;
-  justify-content: space-between;
-  width: 940px;
+
+  @include phones() {
+    flex-direction: column;
+  }
+}
+
+.advantages__info {
+  .section__title {
+    margin-bottom: rem(80px);
+    @include tablets {
+      margin-bottom: rem(40px);
+    }
+  
+    text-align: left;
+    display: block;
+    width: 65%;
+  }
 }
 
 .advantages__item {
-  flex: 1;
-  margin-right: 38px;
+  margin-bottom: rem(50px);
+  padding: 0 rem(15px);
+  display: flex;
+  flex-direction: column;
+  @include phones {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: rem(25px);
+  }
 }
 
 .advantages__item:last-child {
   margin-right: 0;
+}
+
+.text-block {
+  font-size: rem(14px);
+  line-height: 1.8;
 }

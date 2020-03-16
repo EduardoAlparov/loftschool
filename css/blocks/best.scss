@@ -7,6 +7,15 @@
   background-size: cover;
   height: 102vh;
   min-height: 650px;
+
+  .section__title {
+    margin-bottom: rem(80px);
+    @include tablets {
+      margin-bottom: rem(40px);
+    }
+    
+  }
+   
 }
 
 .best__container {

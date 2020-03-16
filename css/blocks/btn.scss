@@ -1,14 +1,27 @@
 
 .button {
-  display: inline-block;
-  padding: 10px 15px;
+  @include inlineblock();
+	background: $orange;
+  padding: rem(9px) rem(16px);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: rem(5px);
   color: white;
   border: none;
   text-transform: uppercase;
-  margin-left: 1rem;
-  font-family: 'Ubuntunormal';
+  @include ubuntu(medium);
+}
+
+.btn {
+	@include inlineblock();
+	background: $orange;
+	font-size: rem(13px);
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	border-radius: rem(5px);
+	padding: rem(9px) rem(16px);
+	@include ubuntu(medium);
 }
 
 

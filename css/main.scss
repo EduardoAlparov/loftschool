@@ -4,17 +4,25 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+$phones: 480px;
+$tablets: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
 //normalize
 @import "../css/_misc/normalize.scss";
 
 // setups
 @import "../css/_misc/mixins.scss";
+@import "../css/_misc/media.scss";
 @import "../css/_misc/fonts.scss";
 @import "../css/_misc/layout.scss";
 
 // components
 @import "../css/blocks/section.scss";
+@import "../css/blocks/socials.scss";
 @import "../css/blocks/header.scss";
+@import "../css/blocks/logo.scss";
 @import "../css/blocks/menu.scss";
 @import "../css/blocks/content.scss";
 @import "../css/blocks/btn.scss";
@@ -22,8 +30,20 @@ $red: #e35028;
 @import "../css/blocks/scroll-down.scss";
 @import "../css/blocks/advantages.scss";
 @import "../css/blocks/advantage.scss";
+@import "../css/blocks/accordeon.scss";
 @import "../css/blocks/feeds.scss";
+@import "../css/blocks/footer.scss";
+@import "../css/blocks/fixed-menu.scss";
 @import "../css/blocks/feed.scss";
 @import "../css/blocks/main-section.scss";
 @import "../css/blocks/main.scss";
+@import "../css/blocks/menu-burger.scss";
+@import "../css/blocks/menu-acco.scss";
+@import "../css/blocks/map.scss";
+@import "../css/blocks/nav.scss";
 @import "../css/blocks/menu.scss";
+@import "../css/blocks/team.scss";
+@import "../css/blocks/order.scss";
+@import "../css/blocks/order-link.scss";
+@import "../css/blocks/hamburger-menu.scss";
+@import "../css/blocks/hamburger-menu-link.scss";

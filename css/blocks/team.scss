@@ -1,0 +1,50 @@
+.team {
+  background: url(/img/teambackground.png);
+  background-size: cover;
+  position: relative;
+
+  @include tablets {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(#2f3234, .93);
+		}
+	}
+}
+
+
+.section__title-team {
+  margin-bottom: 12%;
+}
+
+
+.team__block {
+  position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	background: rgba(#2f3234, .93);
+  padding: 5% 2% 0 7%;
+  
+	@include tablets {
+		position: relative;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		text-align: center;
+		background: transparent;
+		padding: 0;
+	}
+}
+

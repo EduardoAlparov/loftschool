@@ -1,14 +1,25 @@
 $itemsMargin: 13px;
 
-.menu {
+.menu-header {
   text-transform: uppercase;
   color: #fff;
+
+  
+	@include tablets {
+		display: none;
+	}
 }
 
 .menu__list {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @extend %clearfix;
+
+	@include laptop {
+		text-align: center;
+	}
 }
 
 .menu__item {
@@ -18,7 +29,7 @@ $itemsMargin: 13px;
   color: #fff;
   &:after {
     content: '';
-    display: inline-block;
+    @include inlineblock(middle);
     height: 4px;
     width: 4px;
     border-radius: 50%;
@@ -32,15 +43,24 @@ $itemsMargin: 13px;
      content: none;
     }
   }
+
+  @include tablets {
+    display: block;
+  }
 }
 
+
+
+
 .menu__link {
-  color: #fff;
-  font-size: 14px;
-  font-family: 'Ubuntunormal';
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 2.308;
-  margin-left: $itemsMargin;
+  @include inlineblock(middle);
+	font-size: rem(13px);
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+  @include ubuntu(medium);
+  
+  &:hover {
+		text-decoration: underline;
+	}
 }  
