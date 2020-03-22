@@ -28,7 +28,6 @@
 
 .nav__list {
 	width: 100%;
-	@extend %clearfix;
 
 	@include laptop {
 		text-align: center;

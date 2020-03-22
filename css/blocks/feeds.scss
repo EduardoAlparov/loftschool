@@ -17,7 +17,7 @@
   opacity: 0;
   transform: scale(.8);
   transition: .3s;
-  padding: 50px 20px;
+  padding: 50px 32px;
 }
 
 .feed__item:hover .feed__info {
@@ -41,8 +41,9 @@
   text-align: left;
   
   @include phones {
-    font-size: rem(20px);
+    font-size: rem(24px);
     text-align: center;
+    
   }
 }
 
@@ -100,6 +101,7 @@
 }
 
 .feed__button {
+  border: none;
   border-radius: rem(5px);
   background-color: rgb(47, 50, 52);
   padding: rem(8px) rem(12px);
@@ -107,10 +109,39 @@
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  @include ubuntu(medium);
-  font-size: rem(12px);
+  @include ubuntu(normal);
+  font-size: 15px;
   transition: .3s;
+
   &:hover {
     background-color: rgb(31, 33, 34);
   }
+  
+  @include phones{
+    display: none;
+  }
 }
+
+.feed__button-phones {
+  border: none;
+  overflow: hidden;
+  border-radius: rem(5px);
+  background-color: rgb(47, 50, 52);
+  padding: rem(8px) rem(14px);
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include ubuntu(normal);
+  font-size: 13px;
+  transition: .3s;
+  display: none;
+  &:hover {
+    background-color: rgb(31, 33, 34);
+  }
+  
+  @include phones{
+    display: inline-block;
+  }
+}  
+

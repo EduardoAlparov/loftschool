@@ -11,25 +11,19 @@
 .section__title {
   font-family: 'Gagalin';
   color: #f9b43b;
-  font-size: 4.5rem;
+  font-size: 50px;
   font-weight: 400;
-  line-height: 5.3rem;
-  margin-bottom: 40px;
 
   &--black {
     color: $black;
+
+    @include phones {
+      font-size: 35px;
+    }
   }
-}
 
-.section__title-second {
-  font-family: 'Lifehack-Medium';
-  font-size: 65px;
-  color: white;
-  font-weight: 400;
-  line-height: 1.1;
-
-  @include phones {
-    display: flex;
-    justify-content: center;
+  &--white {
+    color: white;
+    font-size: 72px;
   }
 }

@@ -12,6 +12,9 @@
 }
 
 .advantages__info {
+  @include phones {
+    text-align: left;
+  }
   .section__title {
     margin-bottom: rem(80px);
     @include tablets {
@@ -38,6 +41,10 @@
 
 .advantages__item:last-child {
   margin-right: 0;
+
+  @include phones {
+    margin-bottom: 0;
+  }
 }
 
 .text-block {

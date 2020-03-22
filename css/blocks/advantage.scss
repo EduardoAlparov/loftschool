@@ -8,11 +8,12 @@
   @include phones {
     margin-right: rem(20px);
     width: 30%;
+    margin-bottom: 0;
   }
 }
 
 
-.advantages__pc {
+.advantages__pic {
   width: 90%;
   height: rem(100px);
   svg {
@@ -36,5 +37,11 @@
   font-family: 'Ubuntunormal';
   color: rgba(47, 50, 52, 0.8);
   line-height: 1.714;
-  text-align: center;
+  
+  @include phones {
+    text-align: left;
+  }
 }
+ .advantages__text {
+
+ }

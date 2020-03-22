@@ -3,21 +3,28 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	@extend %clearfix;
+	width: 70%;
+
+	@include tablets {
+		width: 100%;
+	}
 }
 
 .menu-acco__item {
-	float: left;
 	height: 100%;
+	float: left;
 
-	&:hover {
-		width: 520px;
+	&.active {
+		width: 792px;
+
+		@include tablets{
+			width: 76%;
+		}
 		.menu-acco__trigger-text {
 			color: $yellow;
 		}
 		.menu-acco__content {
-			width: 520px;
-	    overflow: visible;
+			width: 792px;
 		}
 	}
 }
@@ -56,20 +63,27 @@
 
 .menu-acco__content {
 	height: 100%;
-	float: left;
+	width: 623px;
 	background: rgba(#2f3234, .93);
 	width: 0;
-	overflow: hidden;
+
+
 }
 
 .menu-acco__text {
 	@include ubuntu(light);
 	font-size: rem(14px);
 	color: #fff;
-	padding: rem(60px) rem(30px);
+	padding-left: 110px;
+	padding-top: 35px;
+	padding-right: 30px;
+	text-align: justify;
 	width: 100%;
-  line-height: 1.8;
-	display: none;
+  line-height: 1.714;
+
+	@include tablets {
+		padding-right: 334px;
+	}
 
   @include phones {
     padding: rem(25px) rem(15px);

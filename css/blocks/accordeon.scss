@@ -19,9 +19,6 @@
 		.accordeon__item-trigger {
 			color: $yellow;
 
-			&:before {
-				transform: rotate(-180deg);
-			}
 		}
 	}
 }
@@ -73,7 +70,7 @@
 }
 
 .accordeon__profile {
-  @extend %clearfix;
+  
 	padding-top: rem(14px);
 	display: none;
 
@@ -83,7 +80,12 @@
   
   &.active { 
     display: flex;
-
+		
+		@include phones {
+		  flex-direction: column;
+			align-items: center;
+			padding: 0;
+		}
   }
 }
 

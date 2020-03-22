@@ -4,20 +4,26 @@
   max-width: 1100px;
   justify-content: space-between;
   align-items: center;
+  margin-top: -100px;
+  margin-right: 13px;
+
 
   @include tablets {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: rem(-96px);
+    margin-right: 0;
+  }
+
+  @include phones {
+    margin-right: 0;
   }
 }
 
 .content__image,
 .content__title {
-  float: left;
-  width: 50%;
   @include tablets {
-    float: none;
     width: 100%;
   }
 }
@@ -28,9 +34,10 @@
   flex-shrink: 0;
 
   @include tablets {
-    float: none;
     width: 100%;
-    display: contents;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -42,27 +49,45 @@
     max-width: 80%;
   }
 
-  @include phones {
-    height: rem(230px);
-  }
+  
 }
 
-.content__title {
-  @include phones {
-    height: rem(230px);
-  }
-}
+
 
 .content__title {
-  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  
+
   @include tablets {
     text-align: center;
     padding: rem(30px) 20% 0;
+    align-items: center;
+   
   }
   @include phones {
-    padding: 0 3%;
+    align-items: center;
+    padding-left: rem(15px);
+    padding: 0;
   }
 }
+
+.section__title-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include phones {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 
 .section__title-second {
   font-size: rem(65px);

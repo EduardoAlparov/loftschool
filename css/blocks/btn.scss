@@ -2,19 +2,18 @@
 .button {
   @include inlineblock();
 	background: $orange;
-  padding: rem(9px) rem(16px);
+
   text-decoration: none;
-  border-radius: rem(5px);
+  border-radius: rem(3px);
   color: white;
   border: none;
   text-transform: uppercase;
   @include ubuntu(medium);
 }
-
 .btn {
 	@include inlineblock();
-	background: $orange;
-	font-size: rem(13px);
+	background:  rgb(47, 50, 52);
+	font-size: rem(15px);
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;

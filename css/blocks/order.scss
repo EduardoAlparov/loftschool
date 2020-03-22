@@ -8,9 +8,15 @@
   }
 }
 
-.order__form {
-  @extend %clearfix;
-  margin-left: -5%;
+.order__form-tag {
+
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-left: 75px;
+  }
   
 }
 
@@ -18,13 +24,27 @@
   float: left;
   width: 45%;
   margin-left: 5%;
-  
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include tablets {
+    margin-left: 0;
+  }
 }
 
 .order__form-row {
   margin-bottom: rem(16px);
   display: flex;
   
+  &:nth-child(2n)  {
+    justify-content: center;
+  }
+  
+  &:last-child  {
+    justify-content: center;
+  }
 }
 
 .order__form-label {
@@ -43,26 +63,40 @@
   width: 100%;
 }
 
+.order__form-row {
+
+ &.order__form-row_double{
+   display: flex;
+   justify-content: space-between;
+
+   &.order__form-block {
+     margin-right: 20px;
+   }
+ }
+}
+
+
 .order__form-block {
   display: block;
   width: 100%;
-}
-
-.order__form-row_double {
-  margin-left: rem(-20px);
-  .order__form-block {
-    width: calc(100% / 2 - rem(20px));
-    margin-left: rem(20px);
+  margin-right: 20px;
+  &.order__form-block--house {
+    width: 20%;
   }
 }
 
 .order__form-row_quatro {
-  margin-left: rem(-20px);
+  display: flex;
+  justify-content: space-between;
+  
   .order__form-block {
-    width: calc(100% / 4 - rem(20px));
-    margin-left: rem(20px);
   }
 }
+
+.order__form-block--floor {
+  
+}
+
 
 .order__form-input_textarea {
   height: rem(110px);
@@ -139,7 +173,7 @@
   .order__radio-elem:checked {
     &+.order__radio-fake {
       &:after {
-        background: url("../../img/icons/check.svg") 50% no-repeat transparent;
+        background: url('/img/check.png') 50% no-repeat transparent;
         background-size: contain;
         width: rem(11px);
         height: rem(9px);

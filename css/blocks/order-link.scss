@@ -1,7 +1,6 @@
 .order-link {
 	width: 15%;
 	@include inlineblock(middle);
-	padding: rem(9px) 0;
-	margin-left: 2%;
-	min-width: rem(85px);
+	min-width: rem(98px);
+	margin-bottom: rem(7px);
 }

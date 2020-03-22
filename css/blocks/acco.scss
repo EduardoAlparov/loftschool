@@ -1,0 +1,127 @@
+.menu {
+	background: url(../img/menu-burger.png) 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;
+	top: 10%;
+  left: 10%;
+  
+  @include tablets {
+    font-size: 50px;
+    left: 5%;
+  }
+
+  @include phones {
+    font-size: 35px;
+  }
+}
+
+
+.acco {
+	position: absolute;
+	right: 0;
+	top: 0;
+  bottom: 0;
+}
+
+.acco__item {
+  height: 100%;
+  float: left;
+  display: flex;
+
+  
+  &.active {
+    .acco__content {
+      width: 520px;
+
+      @include tablets {
+        width: 300px;
+      }
+
+      @include phones {
+        width: 264px;
+      }
+    }
+
+    .acco__text {
+      display: flex; 
+    }
+
+		.acco__trigger-text {
+			color: $yellow;
+		}
+	}
+}
+
+.acco__content {
+  height: 100%;
+  position: relative;
+	
+	background: rgba(#2f3234, .93);
+	width: 0;
+  overflow: hidden;
+}
+
+.acco__trigger-text {
+  font-size: rem(40px);
+	color: #fff;
+	@include gagalin;
+	text-align: center;
+	white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-20px);
+
+  @include phones {
+    font-size: rem(26px);
+  }
+}
+
+.acco__trigger {
+  width: rem(80px);
+	display: block;
+  height: 100%;
+  @include cover;
+	text-decoration: none;
+  position: relative;
+}
+
+.acco__text{
+	@include ubuntu(light);
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+  line-height: 1.8;
+  display: none;
+
+  @include tablets {
+    font-size: rem(13px);
+  }
+  @include phones {
+    padding: rem(25px) rem(15px);
+  }
+
+}
+
+.close {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  display: none;
+
+  @include phones {
+    display: flex;
+  }
+}
+
+.close__svg {
+  height: 10px;
+  width: 10px;
+}

@@ -1,8 +1,14 @@
 .header {
-	padding-top: rem(12px);
+	padding-top: rem(4px);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 95%;
+
+
+	@include phones {
+		margin-bottom: rem(29px);
+	}
 }
 
 .header__logo {
@@ -11,6 +17,11 @@
 	@include laptop {
 		width: 15%;
 	}
+	
+	@include tablets {
+		margin-right: rem(187px);
+	}
+	
 }
 
 
@@ -20,6 +31,7 @@
 }
 
 .header__menu {
+	margin-top: -15px;
 	flex: 1;
 	text-align: right;
 	margin-right: rem(20px);

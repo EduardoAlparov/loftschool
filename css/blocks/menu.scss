@@ -15,11 +15,8 @@ $itemsMargin: 13px;
   justify-content: center;
   align-items: center;
 
-  @extend %clearfix;
 
-	@include laptop {
-		text-align: center;
-	}
+
 }
 
 .menu__item {
