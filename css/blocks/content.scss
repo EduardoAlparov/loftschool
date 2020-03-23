@@ -2,39 +2,33 @@
 .content {
   display: flex;
   max-width: 1100px;
-  justify-content: space-between;
   align-items: center;
-  margin-top: -100px;
-  margin-right: 13px;
-
+  justify-content: center;
+  padding-bottom: rem(190px);
 
   @include tablets {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: rem(-96px);
+    padding-bottom: rem(85px);
     margin-right: 0;
   }
 
   @include phones {
     margin-right: 0;
+    padding-bottom: rem(140px);
   }
 }
 
-.content__image,
-.content__title {
-  @include tablets {
-    width: 100%;
-  }
-}
 
 
 .content__image {
   max-width: 100%;
   flex-shrink: 0;
+  margin-right: rem(20px);
 
   @include tablets {
-    width: 100%;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,14 +36,10 @@
 }
 
 .content__image-pic {
-  max-width: 100%;
-  max-height: 100%;
 
   @include tablets {
     max-width: 80%;
   }
-
-  
 }
 
 
@@ -81,7 +71,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+	  font-size: rem(52px);
   }
+
   @include phones {
     display: flex;
     justify-content: center;
@@ -95,6 +87,7 @@
   @include lifehack;
   text-transform: lowercase;
   line-height: 1em;
+
   @include tablets {
     display: flex;
     justify-content: center;

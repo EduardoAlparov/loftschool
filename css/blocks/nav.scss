@@ -29,8 +29,9 @@
 .nav__list {
 	width: 100%;
 
-	@include laptop {
+	@include tablets {
 		text-align: center;
+		padding-top: rem(250px);
 	}
 }
 
@@ -64,6 +65,10 @@
 	color: white;
 	text-decoration: none;
 	@include ubuntu(medium);
+	
+	@include tablets {
+    font-size: rem(24px);
+	}
 
 	&:hover {
 		text-decoration: underline;

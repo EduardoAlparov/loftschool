@@ -21,6 +21,11 @@
 
 .hamburger-menu_visible
 
+
+.hamburger-menu__items {
+	display: flex;
+	justify-content: center;
+}
 .hamburger-menu__logo {
 	position: absolute;
 	top: rem(10px);

@@ -5,107 +5,118 @@
   align-items: center;
   .section__title {
     text-align: center;
+
+    @include phones {
+      font-size: 50px;
+    }
   }
 }
 
-.order__form-tag {
 
+.order__form-tag {
+  display: flex;
+  justify-content: space-around;
 
   @include tablets {
     display: flex;
     flex-direction: column;
-    width: max-content;
-    margin-left: 75px;
+    align-items: center;
+
   }
-  
 }
+
 
 .order__form-col {
-  float: left;
-  width: 45%;
-  margin-left: 5%;
-
-  &:first-child {
-    margin-left: 0;
+  width: 47%;
+  
+  @include tablets {
+    width: 75%;
+    margin-bottom: rem(20px);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  @include tablets {
-    margin-left: 0;
+  @include phones {
+    width: 100%;
   }
 }
+
 
 .order__form-row {
-  margin-bottom: rem(16px);
   display: flex;
-  
-  &:nth-child(2n)  {
-    justify-content: center;
+  justify-content: space-around;
+  margin-bottom: rem(15px);
+
+  &:last-child {
+    margin-bottom: 0;
   }
-  
-  &:last-child  {
-    justify-content: center;
-  }
-}
+}  
+
+
 
 .order__form-label {
-  margin-bottom: rem(17px);
+  margin-bottom: rem(10px);
   color: #fff;
-  font-size: rem(14px);
-
+  font-size: rem(14px);  
 }
 
+
 .order__form-input {
+  width: 100%;
   font-size: rem(14px);
   padding: rem(10px);
   padding: rem(5px) rem(10px);
-  border: rem(1px) solid #d1cfcb;
+  border: rem(1px) solid transparent;
   border-radius: rem(5px);
-  width: 100%;
+ 
+  flex: 1;
 }
-
-.order__form-row {
-
- &.order__form-row_double{
-   display: flex;
-   justify-content: space-between;
-
-   &.order__form-block {
-     margin-right: 20px;
-   }
- }
-}
-
+  
 
 .order__form-block {
-  display: block;
   width: 100%;
-  margin-right: 20px;
-  &.order__form-block--house {
-    width: 20%;
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 
-.order__form-row_quatro {
-  display: flex;
-  justify-content: space-between;
+.order__form-flag {
+  margin-bottom: rem(20px);
+
   
-  .order__form-block {
+
+  &:last-child {
+    margin-bottom: 0;
+  }  
+
+  @include phones {
+    &--radio {
+      display: flex;
+      justify-content: center;
+      margin-bottom: rem(20px);
+    }
+
+    &--mark {
+      display: flex;
+      justify-content: center;
+    }
+
+    &--btn {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
-
-.order__form-block--floor {
-  
-}
-
 
 .order__form-input_textarea {
   height: rem(110px);
   resize: none;
 }
 
-.order__form-buttons {
-  
-}
 
 .order__radio {
   position: relative;
@@ -113,6 +124,10 @@
   margin-right: rem(20px);
   @include inlineblock(middle);
   cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .order__radio-elem {

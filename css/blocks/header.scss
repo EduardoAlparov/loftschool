@@ -1,22 +1,16 @@
 .header {
 	padding-top: rem(4px);
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	width: 95%;
-
+	margin-bottom: rem(60px);
 
 	@include phones {
-		margin-bottom: rem(29px);
+		margin-bottom: rem(117px);
 	}
 }
 
 .header__logo {
-	margin-right: rem(70px);
-
-	@include laptop {
-		width: 15%;
-	}
+	z-index: 50;
 	
 	@include tablets {
 		margin-right: rem(187px);

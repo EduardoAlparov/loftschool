@@ -10,54 +10,110 @@
   <div class="wrapper">
     <div class="maincontent"> 
 
-       
-      <section class="section menu">
-        <div class="section__title section__title--white menu__title">Меню</div>
-        <ul class="acco">
-          <li class="acco__item active"><a class="acco__trigger" href="#" style="background-image: url('./img/meatseat.png')">
-              <div class="acco__trigger-text">Для мясоедов</div></a>
-            <div class="acco__content">
-              <div class="acco__text ">
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
-              </div>
-              <div class="close"><a class="close" href="#">
-                <svg class="close__svg" style="fill: #fff">
-                  <use xlink:href="./img/sprite/spriteclose.svg#close"></use>
-                </svg></a>
-              </div>
-            </div>
+      <section class="section order">
+        <div class="container">
+          <div class="section__title">Закажите доставку</div>
+          <div class="order__form">
+            <form class="order__form-tag" >
 
-          </li>
-          <li class="acco__item"><a class="acco__trigger" href="#" style="background-image: url('./img/vegans.png')">
-              <div class="acco__trigger-text">Вегетарианское</div></a>
-            <div class="acco__content">
-              <div class="acco__text">
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+              <div class="order__form-col">
+                <div class="order__form-row ">
+
+                  <label class="order__form-block ">
+                    <div class="order__form-label">Имя</div>
+                    <input class="order__form-input" name="name" type="text" placeholder="">
+                  </label>
+
+                  <label class="order__form-block">
+                    <div class="order__form-label">Телефон</div>
+                    <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                  </label>
+
+                </div>
+
+
+                <div class="order__form-row">
+
+                  <label class="order__form-block order__form-block">
+                    <div class="order__form-label">Улица</div>
+                    <input class="order__form-input order__form-input--street" name="street" type="text" placeholder="">
+                  </label>
+
+                </div>
+
+                <div class="order__form-row ">
+
+                  <label class="order__form-block ">
+                    <div class="order__form-label">Дом</div>
+                    <input class="order__form-input" name="home" type="text" placeholder="">
+                  </label>
+
+                  <label class="order__form-block">
+                    <div class="order__form-label">Корпус</div>
+                    <input class="order__form-input" name="part" type="text" placeholder="">
+                  </label>
+
+                  <label class="order__form-block">
+                    <div class="order__form-label">Квартира</div>
+                    <input class="order__form-input" name="appt" type="text" placeholder="">
+                  </label>
+
+                  <label class="order__form-block">
+                    <div class="order__form-label">Этаж</div>
+                    <input class="order__form-input" name="floor" type="text" placeholder="">
+                  </label>
+
+                </div>
               </div>
-              <div class="close"><a class="close" href="#">
-                <svg class="close__svg" style="fill: #fff">
-                  <use xlink:href="./img/sprite/spriteclose.svg#close"></use>
-                </svg></a>
+
+
+              <div class="order__form-col">
+
+                <div class="order__form-">
+
+                  <label class="order__form-block">
+                    <div class="order__form-label">Комментарий</div>
+                    <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                  </label>
+                </div>
+
+                <div class="order__form-buttons">
+
+                  <div class="order__form-flag order__form-flag--radio">
+                    
+                    <label class="order__radio">
+                      <input class="order__radio-elem" name="payment" type="radio">
+                      <div class="order__radio-fake"></div>
+                      <div class="order__radio-title">Потребуется сдача</div>
+                    </label>
+
+                    <label class="order__radio">
+                      <input class="order__radio-elem" name="payment" type="radio">
+                      <div class="order__radio-fake"></div>
+                      <div class="order__radio-title">Оплата по карте</div>
+                    </label>
+
+                  </div>
+
+                  <div class="order__form-flag order__form-flag--mark">
+                    <label class="order__radio order__radio_checkbox">
+                      <input class="order__radio-elem" name="callback" type="checkbox">
+                      <div class="order__radio-fake"></div>
+                      <div class="order__radio-title">Не перезванивать</div>
+                    </label>
+                  </div>
+
+                  <div class="order__form-flag order__form-flag--btn">
+                    <input class="order__form-button" name="" type="submit" value="Заказать">
+                    <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
+                  </div>
+                </div>
+
+
               </div>
-            </div>
-          </li>
-          <li class="acco__item"><a class="acco__trigger" href="#" style="background-image: url('./img/diets.png')">
-              <div class="acco__trigger-text">Диетическое</div></a>
-            <div class="acco__content">
-              <div class="acco__text">
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
-              </div>
-              <div class="close"><a class="close" href="#">
-                <svg class="close__svg" style="fill: #fff">
-                  <use xlink:href="./img/sprite/spriteclose.svg#close"></use>
-                </svg></a>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </form>
+          </div>
+        </div>
       </section>
 
 

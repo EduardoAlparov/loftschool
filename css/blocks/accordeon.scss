@@ -51,7 +51,14 @@
 		transition: .3s;
 	}
 
-	&:after {
+	&.active {
+		&:before {
+			transform: rotate(180deg);
+		}
+	}
+	
+	
+	&.after {
 		display: none;
 		border-bottom: rem(7px) solid $yellow;
 		border-left: rem(5px) solid transparent;
