@@ -2,10 +2,14 @@
   color: white;
   line-height: 0.889;
   text-align: left;
+  margin-bottom: rem(50px);
+
 
   @include tablets {
     text-align: center;
-  }
+    font-size: rem(71px);
+    line-height: 0.889;
+  } 
 
   @include phones {
     font-size: 50px;
