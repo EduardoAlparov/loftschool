@@ -67,7 +67,7 @@
 }
 
 .slider__pages-prev {
-  background: url('../img/arrow-scroll-prev.png') no-repeat;
+  background: url('./img/arrow-scroll-prev.png') no-repeat;
   left: rem(-14px);
 
   @include tablets{
@@ -81,7 +81,7 @@
 }
 
 .slider__pages-next {
-  background: url('../img/arrow-scroll-next.png') no-repeat;
+  background: url('./img/arrow-scroll-next.png') no-repeat;
   right: rem(-14px);
 
   @include tablets{
