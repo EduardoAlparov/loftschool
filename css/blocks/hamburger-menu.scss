@@ -1,25 +1,22 @@
 .hamburger-menu {
 	position: fixed;
 	top: 0;
-	left: 0;
 	right: 0;
 	bottom: 0;
 	background: rgba(#2f3234, .99);
 	align-items: center;
 	justify-content: center;
 	z-index: 100;
-	display: none;
+  left: 120%; 
 	transition: opacity .3s;
-	
-	
-	&_visible {
-		display: flex;
-		opacity: 0;
-	}
 
+	&--active {
+		left: 0;
+		opacity: 1;
+	}
 }
 
-.hamburger-menu_visible
+
 
 
 .hamburger-menu__items {
@@ -34,8 +31,8 @@
 
 .hamburger-menu__close {
 	position: absolute;
-	right: rem(15px);
-	top: rem(15px);
+	right: rem(8px);
+	top: rem(20px);
 	width: rem(18px);
 	height: rem(18px);
 	padding: rem(15px);
@@ -49,6 +46,8 @@
 		}
 	}
 }
+
+
 
 .hamburger-menu__close-icon {
 	width: 100%;

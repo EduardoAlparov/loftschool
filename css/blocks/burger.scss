@@ -1,0 +1,100 @@
+.title--burger {
+  color: white;
+  line-height: 0.889;
+  text-align: left;
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 50px;
+    line-height: 1.053;
+  }
+}
+
+
+
+
+.container-burger {
+  display: flex;
+  align-items: center;
+}
+
+//тело
+
+
+.burger {
+  background: linear-gradient(to bottom, #f9b33b 0%, #f2a23a 27%, #f19e39 64%, #ef9739 82%, #f9b33b 100%);
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.slider {
+  position: relative;
+  width: 100%;
+
+  @include tablets {
+    width: 70%;
+  }
+
+  @include phones {
+    width: unset;
+  }
+}
+
+.slider__wrapp {
+  overflow: hidden;
+}
+
+.slider__item {
+  position: relative;
+  flex: 1;
+}
+
+//стрелки
+
+.slider__pages {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider__pages-prev {
+  background: url(/img/arrow-scroll-prev.png) no-repeat;
+  left: rem(-14px);
+
+  @include tablets{
+    left: rem(-90px);
+  }
+
+  @include phones{
+    left: rem(0px);
+  }
+
+}
+
+.slider__pages-next {
+  background: url(/img/arrow-scroll-next.png) no-repeat;
+  right: rem(-14px);
+
+  @include tablets{
+    right: rem(-90px);
+  }
+
+  @include phones{
+    right: rem(0px);
+  }  
+}
+
+.slider__pages-prev, .slider__pages-next {
+  width: 15px;
+  height: 27px;
+  position: relative;
+}

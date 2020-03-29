@@ -11,8 +11,6 @@
 		.nav__item {
 			display: block;
 			text-align: center;
-			opacity: 0;
-			animation-fill-mode: forwards;
 
 			&:after {
 				display: block;
@@ -24,6 +22,10 @@
 			display: block;
 		}
 	}
+}
+
+.nav__item--active{
+	opacity: 1;
 }
 
 .nav__list {

@@ -5,6 +5,7 @@
 	align-items: center;
 	margin-left: rem(30px);
 	display: none;
+	cursor: pointer;
 
 	@include tablets {
 		display: inline-flex;

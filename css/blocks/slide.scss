@@ -1,0 +1,226 @@
+.slide {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+
+  }
+}
+
+.slide__content {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.slide__photo {
+  flex-shrink: 0;
+  padding: 60px 0;
+  
+  @include tablets {
+    padding: rem(70px) 0 0 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include phones {
+    padding: rem(120px) 0 0 0;
+  }
+
+}
+
+.slide__img {
+  @include tablets {
+  max-width: 90%;
+  }
+}
+
+
+.slide__desc {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Ubuntu";
+  color: rgb(255, 255, 255);
+  line-height: 1.714;
+  text-align: left;
+  opacity: .9;
+
+  @include tablets {
+    text-align: center;
+  }  
+}
+
+
+.slide__price {
+  display: flex;
+  align-items: baseline;
+  margin-right: rem(20px);
+}
+
+
+.slide__order {
+  display: flex;
+  align-items: baseline;
+}
+
+.slide__count {
+  font-family: 'Gagalin';
+  font-size: rem(70px);
+  color: $red;
+  margin-right: rem(5px);
+}
+
+.slide__wallet {
+  font-family: 'Gagalin';
+  font-size: rem(30px);
+  color: $red;
+}
+
+.composition {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: rgba(227, 80, 40, 0.4);
+
+  &:hover {
+    background-color: rgb(227, 80, 40);
+  }
+}
+
+.composition__icon {
+  display: flex;
+  flex-direction: column;
+}
+
+.composition__pic {
+  max-height: 100%;
+  max-width: 100%;
+}   
+
+
+.composition__text {
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: rgb(255, 255, 255);
+  line-height: 2.008;
+  text-align: center;
+}
+
+.composition__down {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fef8ec;
+  border-radius: 5px;
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.composition:hover
+.composition__down {
+  visibility: visible;
+}
+
+.composition__cross {
+  display: none;
+  @include tablets{
+    padding-top: 14px;
+    padding-right: 14px;
+    display: inline;
+  }
+}
+
+.composition__list {
+  margin: rem(15px) 0;
+  width: rem(270px);
+
+  @include tablets {
+    width: rem(322px);
+  }
+}  
+
+.composition__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.composition__name{
+    font-size: 14px;
+    font-family: "Ubuntu";
+    color: rgb(47, 50, 52);
+    line-height: 1.714;
+    text-align: left;
+}
+
+.composition__gramms {
+  font-size: 14px;
+  font-family: "Ubuntu";
+  color: rgb(47, 50, 52);
+  line-height: 1.714;
+  text-align: right;
+}
+
+.calories {
+  height: 80px;
+  width: 60px;
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @include tablets {
+    top: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.calories__img {
+  position: relative;
+}
+
+.calories__pic {
+  max-height: 100%;
+}
+
+.calories__count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-family: "Gagalin";
+  color: rgba(255, 255, 255, 0.502);
+  line-height: 1.2;
+}
+
+.calories__text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: rgba(255, 255, 255, 0.502);
+  line-height: 1.714;
+}

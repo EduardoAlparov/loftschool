@@ -4,19 +4,19 @@
   max-width: 1100px;
   align-items: center;
   justify-content: center;
-  padding-bottom: rem(190px);
+  padding-bottom: rem(100px);
 
   @include tablets {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: rem(85px);
+    padding-bottom: rem(35px);
     margin-right: 0;
   }
 
   @include phones {
     margin-right: 0;
-    padding-bottom: rem(140px);
+    padding-bottom: rem(80px);
   }
 }
 
@@ -28,7 +28,7 @@
   margin-right: rem(20px);
 
   @include tablets {
-   
+    margin-right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,9 +36,8 @@
 }
 
 .content__image-pic {
-
   @include tablets {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 
