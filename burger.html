@@ -42,10 +42,8 @@
             </div>
           
             <div class="header__links "><a class="order-link btn" href="">Заказать</a>
-            <div class="hamburger-menu-link" id="hamburger-menu-link">
-              <div class="hamburger-menu-link__bars"></div>
             </div>
-            </div>
+
           </div>
           
     
@@ -563,6 +561,9 @@
       </section>
     </div>
   </div>
+  <div class="hamburger-menu-link" id="hamburger-menu-link">
+    <div class="hamburger-menu-link__bars"></div>
+  </div>
   <div class="hamburger-menu" id="hamburger-menu">
     <div class="hamburger-menu__logo"><a class="logo" href=""><img src="./img/logo.png"></a></div>
     <div class="hamburger-menu__items">
@@ -601,23 +602,7 @@
   </div>
 </div>
 
-<script>
-  let hamburgerMenu  = document.querySelector('.hamburger-menu');
-  let hamburgerMenuLink = document.querySelector('.hamburger-menu-link');
-  let close = document.querySelector('.hamburger-menu__close');
-
-  function toggleMenu(){
-    hamburgerMenu.classList.add('hamburger-menu--active');
-  }
-
-  function menuClose(){
-    hamburgerMenu.classList.remove('hamburger-menu--active');
-  }
-
-  hamburgerMenuLink.addEventListener('click' , toggleMenu);
-  close.addEventListener('click', menuClose);
-
-</script>
+<script src="/js/menu.js"></script>
 
 </body>
 </html>

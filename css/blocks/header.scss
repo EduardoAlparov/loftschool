@@ -5,7 +5,7 @@
 	
 
 	@include phones {
-	
+		margin-bottom: 10%;
 	}
 }
 
@@ -13,7 +13,11 @@
 	z-index: 50;
 	
 	@include tablets {
-		margin-right: rem(187px);
+	
+	}
+
+	@include tablets {
+
 	}
 	
 }
@@ -21,7 +25,8 @@
 
 .header__links {
   display: flex;
-  align-items: center;
+	align-items: center;
+	margin-right: rem(50px);
 }
 
 .header__menu {

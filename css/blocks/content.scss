@@ -39,6 +39,10 @@
   @include tablets {
     max-width: 70%;
   }
+
+  @include phones {
+    max-width: 80%;
+  }
 }
 
 

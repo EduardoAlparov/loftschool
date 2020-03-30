@@ -1,5 +1,6 @@
 .hamburger-menu {
 	position: fixed;
+	display: flex;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -9,11 +10,13 @@
 	z-index: 100;
   left: 120%; 
 	transition: opacity .3s;
+	z-index: 111111;
 
 	&--active {
 		left: 0;
 		opacity: 1;
 	}
+	
 }
 
 
@@ -32,7 +35,7 @@
 .hamburger-menu__close {
 	position: absolute;
 	right: rem(8px);
-	top: rem(20px);
+	top: rem(15px);
 	width: rem(18px);
 	height: rem(18px);
 	padding: rem(15px);

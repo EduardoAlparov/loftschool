@@ -9,6 +9,17 @@
 
 	@include tablets {
 		display: inline-flex;
+		position: fixed;
+    z-index: 10000;
+    top: 25px;
+    right: 20px;
+
+	}
+}
+
+.hamburger-menu--active {
+	.hamburger-menu-link__bars{
+	  display: none;
 	}
 }
 
@@ -16,7 +27,7 @@
 	&, &:before, &:after {
 		background: #fff;
 		width: rem(20px);
-		height: rem(5px);
+		height: rem(4px);
 		border-radius: rem(3px);
 	}
 
