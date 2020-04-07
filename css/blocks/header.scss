@@ -26,7 +26,10 @@
 .header__links {
   display: flex;
 	align-items: center;
-	margin-right: rem(50px);
+	
+	@include tablets {
+    margin-right: rem(50px);
+	}
 }
 
 .header__menu {
@@ -36,9 +39,7 @@
 	margin-right: rem(20px);
 
 
-  @include laptop {
-		width: 85%;
-	}
+ 
 
 	@include tablets {
 		text-align: right;

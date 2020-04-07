@@ -1,7 +1,8 @@
 .menu {
 	background: url(../img/menu-burger.png) 50% no-repeat;
 	background-size: cover;
-	position: relative;
+  position: relative;
+  justify-content: flex-end;
 }
 
 .menu__title {
@@ -21,7 +22,8 @@
 
 
 .acco {
-	position: absolute;
+	display: flex;
+  position: relative;
 	right: 0;
 	top: 0;
   bottom: 0;
@@ -29,11 +31,10 @@
 
 .acco__item {
   height: 100%;
-  float: left;
   display: flex;
 
   
-  &.active {
+  &--active {
     .acco__content {
       width: 520px;
 
@@ -114,10 +115,9 @@
   position: absolute;
   top: 2%;
   right: 3%;
-  display: none;
-
+ 
   @include phones {
-    display: flex;
+    display: none;
   }
 }
 

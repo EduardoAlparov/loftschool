@@ -53,9 +53,22 @@
   overflow: hidden;
 }
 
+.slider__list {
+
+  position: relative;
+  display: flex;
+ 
+  transition:all 1s; 
+}
+
 .slider__item {
+  width: 100%;
+  flex-shrink: 0;
   position: relative;
   flex: 1;
+  display: flex;
+  align-items:center;
+  justify-content: center;
 }
 
 //стрелки
