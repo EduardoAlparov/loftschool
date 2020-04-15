@@ -6,7 +6,7 @@ const popupFalse =document.querySelector(".status-popup-false");
 
 clearField.addEventListener("click", event =>{
     event.preventDefault();
-    const data = {
+    let myForm = {
       names : myForm.elements.names.value='',
       phone : myForm.elements.phone.value='',
       street : myForm.elements.street.value='',
@@ -14,8 +14,7 @@ clearField.addEventListener("click", event =>{
       part : myForm.elements.part.value='',
       appt : myForm.elements.appt.value='',
       floor : myForm.elements.floor.value='',
-      comment : myForm.elements.comment.value='' ,
-      to : 'workman133@yandex.ru',           
+      comment : myForm.elements.comment.value=''           
     };
 });
 
@@ -23,18 +22,13 @@ send.addEventListener("click", event =>{
     event.preventDefault();
 
     if(!validateForm(myForm)){
-        const data = {
-            names : myForm.elements.names.value ,
-            phone : myForm.elements.phone.value ,
-            comment : myForm.elements.comment.value ,
-            to :'workman133@yandex.ru',
-        };
-
+        var formData = new FormData(myForm);
+        formData.append("to", "test@test.ru");
         xhr = new XMLHttpRequest();
         xhr.responseType ='json';
-        xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+        xhr.open("POST",'https://webdev-api.loftschool.com/sendmail', true);
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-        xhr.send(JSON.stringify(data));
+        xhr.send();
 
         xhr.addEventListener("load", ()=>{
             event.preventDefault();

@@ -3,7 +3,6 @@
 	height: 100vh;
 	min-height: rem(650px);
 	position: relative;
-  display: flex;
   overflow: hidden;
 }
 
@@ -26,4 +25,14 @@
     color: white;
     font-size: 72px;
   }
+
+  &--center {
+    margin-top: rem(46px);
+    text-align: center;
+
+    @include tablets {
+      font-size: 50px;
+    }
+  }
+
 }

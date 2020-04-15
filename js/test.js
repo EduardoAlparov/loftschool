@@ -1,68 +1,47 @@
-function accordionMenu() {
-  const menuItems = document.querySelectorAll('.menus__item'); // полуаем все li элементы
-  const menuAccord = document.querySelector('.menus__list'); // полуаем ul элемент
-
-  menuAccord.addEventListener('click', event => {
-    let target = event.target.parentNode; // родитель спана - ссылка
-    let content = target.nextElementSibling; // следующий сосед ссылки - див с контентом
-    let item = target.parentNode; // родитель ссылки - лишка
-
-    const tarWidth = target.clientWidth; // ширина одной лишки (ссылки)
-    const windowWidth = document.documentElement.clientWidth; // ширина окна браузера
-    const layoutContentWidth = 520; // ширина контента
-    const breakpointPhone = 480; // точка меньше которой меняется поведение слайдера
-    const closeMenuWidth = tarWidth * menuItems.length; // ширина закрытого слайдера (3 лишки)
-    const openMenuWidth = closeMenuWidth + layoutContentWidth; // ширина открытого слайдера (3 лишки и контент)
-
-    // проверяем был ли клик по спану
-    if (event.target.classList.contains('menus__title')) {
-      moveMenu();
-    }
-    // клик был не по спану - переопределяем переменные
-    target = event.target; // ссылка
-    content = target.nextElementSibling;
-    item = target.parentNode;
-
-    // проверяем был ли клик по ссылке
-    if (target.classList.contains('menus__link')) {
-      moveMenu();
-    }
-
-    function moveMenu() {
-      // закрываем все лишки, кроме той по которой был клик
-      for (const iterator of menuItems) {
-        if (iterator != item) {
-          iterator.classList.remove('menus__item--active');
-          iterator.lastElementChild.style.width = 0;
-          menuAccord.style.transform = `translateX(0)`;
+const deliveryForm = document.querySelector('#deliveryForm');
+const deliverySubmit = document.querySelector('#deliverySubmit');
+    deliverySubmit.addEventListener ('click', e => {
+        e.preventDefault();
+        if(!validateForm(deliveryForm)){
+            var formData = new FormData(deliveryForm);
+            formData.append("to", "test@test.ru");
+            var xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';
+            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+            xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+            xhr.send(formData);
+            xhr.addEventListener('load', ()=> {
+                if(xhr.response.status) {
+                    reviewTitle = "Заявка";
+                    reviewText = xhr.response.message;
+                    togglePopup(reviewTitle, reviewText);
+                } else {
+                    reviewTitle = "Ошибка";
+                    reviewText = xhr.response.message;
+                    togglePopup(reviewTitle, reviewText);
+                };
+            })
         }
-      }
-
-      if (item.classList.contains('menus__item--active')) {
-        item.classList.remove('menus__item--active');
-        content.style.width = 0;
-      } else {
-        item.classList.add('menus__item--active');
-
-        if (windowWidth > breakpointPhone && windowWidth < openMenuWidth) {
-          content.style.width = windowWidth - closeMenuWidth + 'px';
-        } else if (windowWidth <= breakpointPhone) {
-          let num;
-          // получаем число лишек на которое нужно сдвинуть список
-          for (let i = 0; i < menuItems.length; i++) {
-            if (menuItems[i] === item) {
-              num = menuItems.length - (i + 1);
-            }
-          }
-
-          menuAccord.style.transform = `translateX(${tarWidth * num}px)`;
-          content.style.width = windowWidth - tarWidth + 'px';
-        } else {
-          content.style.width = 520 + 'px';
+    });
+    function validateForm(form){
+        let valid =true;
+    
+        if(!validateField(deliveryForm.elements.name)){
+            valid = false;
         }
-      }
+        if(!validateField(deliveryForm.elements.phone)){
+            valid = false;
+        }
+        if(!validateField(deliveryForm.elements.comment)){
+            valid = false;
+        }
     }
-  });
-}
+    
+    function validateField(field){
+        field.nextElementSibling.textContent = field.validationMessage;
+        return field.checkValidity();
+    }
 
-accordionMenu();
+
+
+    

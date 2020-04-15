@@ -22,15 +22,15 @@ body {
   color: $black;
 }
 
-.maincontent {
+.main-content {
   height: 100%;
+ 
 }
 
 .wrapper {
-  position: relative;
+  height: 100%;
   width: 100%;
   // min-width: rem(940px) + rem(20px);
-  min-height: 100%;
   overflow: hidden;
 }
 
