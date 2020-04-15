@@ -1,6 +1,7 @@
 node_modules/
 bower_components/
 build/
+dist/
 .Saved/
 _arc/
 .vscode/
@@ -15,3 +16,4 @@ ex_files
 Thumbs.db
 __MACOSX/
 log.md
+_config.yml
