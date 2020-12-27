@@ -1,10 +1,13 @@
-let onePageScroll = () =>{
+let onePageScroll = () => {
   const wrapper = document.querySelector('.wrapper');
   const content = wrapper.querySelector('.main-content');
   const pages = content.querySelectorAll('.section');
   const points = document.querySelectorAll('.fixed-menu__item');
   const dataScrollto = document.querySelectorAll('[data-scroll-to]');
-  
+  const headerMenuLink = document.querySelectorAll('.nav__link');
+  const arrowButton = document.querySelector('.down');
+  const orderButton = document.querySelector('.order-link');
+
   let inScroll = false;
   
   addNavigation();
@@ -24,10 +27,11 @@ let onePageScroll = () =>{
     
     content.style.transform = `translateY(${position})`;
     
+    
     setTimeout(() => {
       inScroll = false;
       addClass(points);
-    }, 700); //transition + 300(инерция скролла)
+    }, 200); //transition + 300(инерция скролла)
     
     function addClass(arr){
       arr[pageNumber].classList.add('active');
@@ -39,11 +43,11 @@ let onePageScroll = () =>{
       }
     }
   }
- 
+
   // функция навигации по клику data-scroll
   function addNavigation(){
     for(const point of dataScrollto){
-      point.addEventListener('click' , e=>{
+      point.addEventListener('click' , e => {
         e.preventDefault();
         doTransition(point.dataset.scrollTo);
       })
@@ -90,7 +94,7 @@ let onePageScroll = () =>{
     }
   }
   
-  // функция определяет куда скроли полльзователь и вызывает doTransition
+  // функция определяет куда скролит полльзователь и вызывает doTransition
   function scrollToPage(direct){
     let page = definePage(pages);
     
@@ -104,6 +108,38 @@ let onePageScroll = () =>{
       doTransition(numPage);
     }
   }
+
+  (function headerMenuButton() {
+    headerMenuLink.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const id = e.target.getAttribute('href').replace('#', '');
+
+        pages.forEach((page) => {
+          page.classList.remove('active');
+        })
+        
+        item.classList.add('active');
+        document.getElementById(id).classList.add('active');
+        const pageNumberAfterLink = document.getElementById(id).dataset.scrollFor;
+        doTransition(pageNumberAfterLink);
+      })
+    })
+  })()
+
+  arrowButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    doTransition(1);
+  })
+  
+  orderButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    doTransition(7);
+  })
 }
 
 onePageScroll();
+

@@ -24,7 +24,7 @@ body {
 
 .main-content {
   height: 100%;
- 
+  transition: all .7s ease-in-out;
 }
 
 .wrapper {
@@ -38,7 +38,7 @@ body {
 .container {
   margin: 0 auto;
   position: relative;
-  max-width: 940px;
+  max-width: 1200px;
   max-height: 100%;
   width: 95%;
   display: flex;
@@ -68,8 +68,6 @@ textarea {
   outline: none;
 }
 
-
-
 ul {
   padding: 0;
   margin: 0;
@@ -91,11 +89,3 @@ footer {
 * {
   box-sizing: border-box;
 }
-
-// .section {
-//   // min-height: rem(650px);
-//   height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// }

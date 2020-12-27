@@ -1,7 +1,6 @@
 {
   "name": "git_burger",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "arr-filter": "^1.1.2",
@@ -139,5 +138,6 @@
   "bugs": {
     "url": "https://github.com/EduardoAlparov/loftschool/issues"
   },
-  "homepage": "https://github.com/EduardoAlparov/loftschool#readme"
+  "homepage": "https://github.com/EduardoAlparov/loftschool#readme",
+  "description": ""
 }

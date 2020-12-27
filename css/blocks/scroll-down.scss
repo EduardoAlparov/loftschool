@@ -1,5 +1,10 @@
+.container--main-hero {
+  justify-content: space-between;
+  height: 100%;
+}
 
 .down {
+  display: block;
   width: 1.8125rem;
   height: 0.875rem;
   font-style: 'Ubuntu';
@@ -9,4 +14,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5%;
 }

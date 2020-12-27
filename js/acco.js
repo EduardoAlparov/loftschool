@@ -1,13 +1,12 @@
-
-function accordeonTeam(){
+function accordeonTeam() {
   const workers =  document.querySelectorAll('.accordeon__item');
   const teamAccord = document.querySelector('.accordeon__list');
-
-  teamAccord.addEventListener('click', function(event){
+  
+  teamAccord.addEventListener('click', function(event) {
     event.preventDefault();
-    const target =event.target;
+    const target = event.target;
 
-    if(target.classList.contains('accordeon__item-trigger')){
+    if(target.classList.contains('accordeon__item-trigger')) {
       const worker = target.parentNode; // родитель ссылки 
       const content = target.nextElementSibling; // рядом на уровне
       const contentHeight = content.firstElementChild.clientHeight; // высота чайлда соседа

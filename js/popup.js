@@ -23,6 +23,14 @@ function popupReview(){
 
       popup.classList.remove('popup--active');
     })
+
+    if (popup.classList.contains('popup--active')) {
+      document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('popup')) {
+          popup.classList.remove('popup--active')
+        }
+      })
+    }
   }
 }
 

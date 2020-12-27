@@ -87,7 +87,10 @@
 .order__form-flag {
   margin-bottom: rem(20px);
 
-  
+  &--btn {
+    display: flex;
+    justify-content: center;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -198,7 +201,9 @@
 }
 
 .order__form-button {
+  outline: none;
   @include inlineblock(middle);
+  display: block;
   margin-right: rem(20px);
   border: 0;
   background: $red;
@@ -215,4 +220,11 @@
   padding-right: 0;
   text-transform: none;
   background: transparent;
+}
+
+
+.order-link {
+	@include inlineblock(middle);
+	min-width: rem(98px);
+	margin-bottom: rem(7px);
 }
